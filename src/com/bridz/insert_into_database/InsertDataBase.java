@@ -13,9 +13,9 @@ interface MySqlHelper {
 
 //CLASS CONNECTION DATABASE BY USING MYSQL
 class ConnectionDatabase implements MySqlHelper {
-	
+
 	public void getMySqlDbConnection() throws Exception	{
-		
+
 		String url = "jdbc:mysql://localhost:3306/TestDataBase";
 		String userName = "root";
 		String password = "admin";
@@ -39,12 +39,12 @@ class ConnectionDatabase implements MySqlHelper {
 
 
 public class InsertDataBase {
-	
+
 	//RUN METHOD
 	public static void run() throws Exception {
-		
-	//CREATED OBJECT OF CONNECTION DATABASE
-	ConnectionDatabase connectionDatabaseObject =  new ConnectionDatabase();
-	connectionDatabaseObject.getMySqlDbConnection();
+
+		//CREATED OBJECT OF CONNECTION DATABASE
+		ConnectionDatabase connectionDatabaseObject =  new ConnectionDatabase();
+		connectionDatabaseObject.getMySqlDbConnection();
 	}
 }
