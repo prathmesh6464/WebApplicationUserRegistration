@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+
+	<!-- USER LOGIN SERVLET -->
+	<servlet>
+		<servlet-name>UserLogin</servlet-name>
+		<servlet-class>com.bridz.userLogin.UserLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLogin</servlet-name>
+		<url-pattern>/isValidUser</url-pattern>
+	</servlet-mapping>
+
+	<!-- USER LOGIN SERVLET -->
+	<servlet>
+		<servlet-name>UserRegistration</servlet-name>
+		<servlet-class>com.bridz.uerLogin.UserRegistrationForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserRegistration</servlet-name>      
+		<url-pattern>/registerUser</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
