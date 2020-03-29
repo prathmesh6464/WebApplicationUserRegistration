@@ -1,6 +1,4 @@
 package com.bridz.user_login;
-
-
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServlet;
