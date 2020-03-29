@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 
 //CLASS USER LOGIN EXTENDS HTTP SERVLET
 public class UserLogin extends HttpServlet {
-
+	
+	//STATIC FINAL VARIABLE
 	private static final long serialVersionUID = 2970376729289338191L;
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -20,4 +21,4 @@ public class UserLogin extends HttpServlet {
 		PrintWriter responseObject = response.getWriter();
 		responseObject.println(userName);
 	}
-}
+}	
