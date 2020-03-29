@@ -43,6 +43,7 @@ public class InsertDataBase {
 	//RUN METHOD
 	public static void run() throws Exception {
 		
+	//CREATED OBJECT OF CONNECTION DATABASE
 	ConnectionDatabase connectionDatabaseObject =  new ConnectionDatabase();
 	connectionDatabaseObject.getMySqlDbConnection();
 	}
