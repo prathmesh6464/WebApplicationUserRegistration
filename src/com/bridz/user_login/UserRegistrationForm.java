@@ -7,9 +7,10 @@ import javax.servlet.http.HttpServletResponse;
 //USER REGISTRATION FORM
 public class UserRegistrationForm extends HttpServlet {
 	
-	private static final long serialVersionUID = -1561542084453441840L;
+	//VARIABLE
+	static final long serialVersionUID = -1561542084453441840L;
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response) {
+	public void service(HttpServletRequest request, HttpServletResponse response) {
 		
 		String nameOfUser = request.getParameter("nameOfUser");
 		String lastNameOfUser = request.getParameter("lastNameOfUser");
