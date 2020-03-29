@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>User Login</title>
+<title>Login Page</title>
 </head>
 <body>
 	<form action="isValidUser" method="post">
@@ -25,10 +23,9 @@
 				<td></td>
 				<td><br> <input type="submit" value="Login">
 					&nbsp; &nbsp; <a
-					href="http://localhost:8081/WebApplication/UserRegistrationForm.jsp">
+					href="http://localhost:8081/WebApplicationUserRegistration/UserRegistrationForm.jsp">
 						<input type="button" value="Sign Up">
 				</a>
-				<td></td>
 			</tr>
 		</table>
 	</form>
