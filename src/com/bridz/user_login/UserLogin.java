@@ -20,10 +20,6 @@ public class UserLogin extends HttpServlet {
 		System.out.println(password);
 		PrintWriter responseObject = response.getWriter();
 		responseObject.println(userName);
-		try {
-			InsertDataBase.run(userName,password);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
 	}
 }
