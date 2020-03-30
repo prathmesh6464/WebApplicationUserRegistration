@@ -1,4 +1,5 @@
 package com.bridz.user_login;
+import com.bridz.insert_into_database.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServlet;
@@ -20,5 +21,11 @@ public class UserLogin extends HttpServlet {
 		System.out.println(password);
 		PrintWriter responseObject = response.getWriter();
 		responseObject.println(userName);
+		//try {
+		//	InsertDataBase.run();
+		//} catch (Exception e) {
+			// TODO Auto-generated catch block
+		//	e.printStackTrace();
+		//}
 	}
 }	
