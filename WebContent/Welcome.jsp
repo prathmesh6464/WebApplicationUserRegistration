@@ -6,6 +6,11 @@
 <meta charset="ISO-8859-1">
 <title>Home Page</title>
 </head>
-<body>Welcome
+<body>
+<center><h1>Welcome</h1></center>
+<div align="right">
+<a href="http://localhost:8081/WebApplicationUserRegistration/LoginPage.jsp">
+<input type="button" value="Logout" /></a>
+</div>
 </body>
 </html>
