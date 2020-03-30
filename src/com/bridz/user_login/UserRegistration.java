@@ -23,7 +23,7 @@ public class UserRegistration extends HttpServlet {
 		System.out.println("Password : "+password);
 		try {
 			
-			InsertDatabase.run(nameOfUser, lastNameOfUser, userName, password);
+			InsertDataBase.run(nameOfUser, lastNameOfUser, userName, password);
 		} catch (Exception e) {
 		
 			e.printStackTrace();
