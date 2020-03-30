@@ -6,11 +6,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 //CLASS USER LOGIN EXTENDS HTTP SERVLET
 public class UserLogin extends HttpServlet {
 
-	//STATIC FINAL VARIABLE
+	// STATIC FINAL VARIABLE
 	private static final long serialVersionUID = 2970376729289338191L;
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -21,11 +20,10 @@ public class UserLogin extends HttpServlet {
 		System.out.println(password);
 		PrintWriter responseObject = response.getWriter();
 		responseObject.println(userName);
-		//try {
-		//	InsertDataBase.run();
-		//} catch (Exception e) {
-		// TODO Auto-generated catch block
-		//	e.printStackTrace();
-		//}
+		try {
+			InsertDataBase.run(userName,password);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-}	
+}
