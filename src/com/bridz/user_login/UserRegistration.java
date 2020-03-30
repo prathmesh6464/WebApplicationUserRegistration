@@ -1,8 +1,6 @@
 package com.bridz.user_login;
 import com.bridz.insert_into_database.*;
-
 import java.lang.ProcessBuilder.Redirect;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,14 +23,10 @@ public class UserRegistration extends HttpServlet {
 		System.out.println("User name : "+userName);
 		System.out.println("Password : "+password);
 		try {
-			
 			InsertDataBase.run(nameOfUser, lastNameOfUser, userName, password);
-<<<<<<< HEAD
-=======
 			response.sendRedirect("http://localhost:8081/WebApplicationUserRegistration/Welcome.jsp");
->>>>>>> 8.DevelopAllinSimlarBranch
 		} catch (Exception e) {
-		
+
 			e.printStackTrace();
 		}
 	}
