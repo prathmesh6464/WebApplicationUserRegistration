@@ -17,7 +17,7 @@
 	<!-- USER LOGIN SERVLET -->
 	<servlet>
 		<servlet-name>UserRegistration</servlet-name>
-		<servlet-class>com.bridz.user_login.UserRegistrationForm</servlet-class>
+		<servlet-class>com.bridz.user_login.UserRegistration</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UserRegistration</servlet-name>
