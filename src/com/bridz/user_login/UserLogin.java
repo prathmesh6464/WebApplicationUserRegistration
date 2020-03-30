@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 //CLASS USER LOGIN EXTENDS HTTP SERVLET
 public class UserLogin extends HttpServlet {
-	
+
 	//STATIC FINAL VARIABLE
 	private static final long serialVersionUID = 2970376729289338191L;
 
@@ -24,7 +24,7 @@ public class UserLogin extends HttpServlet {
 		//try {
 		//	InsertDataBase.run();
 		//} catch (Exception e) {
-			// TODO Auto-generated catch block
+		// TODO Auto-generated catch block
 		//	e.printStackTrace();
 		//}
 	}
