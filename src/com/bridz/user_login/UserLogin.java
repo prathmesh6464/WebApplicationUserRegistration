@@ -15,13 +15,16 @@ public class UserLogin extends HttpServlet {
 	private static final long serialVersionUID = 2970376729289338191L;
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-
+		
+		//TAKING USER NAME AND PASSWORD FROM HTTP SERVLET REQUEST
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
-		System.out.println(userName);
-		System.out.println(password);
-
+		PrintWriter printWriterObject = response.getWriter();  
+				
+		//TEMPARORY VARIABLE FOR CHECKING USER LOG IN OR NOT
+		int temproryCheck = 0;
 		ResultSet resultSet = null;
+				
 		try {
 			resultSet = InsertDataBase.getResultSet();
 		} catch (ClassNotFoundException e) {
@@ -37,8 +40,10 @@ public class UserLogin extends HttpServlet {
 				System.out.println(userNameToCheck);
 				System.out.println(passwordToCheck);
 				
-				if(userName.equals(userNameToCheck) && password.equals(passwordToCheck)) 
-				{
+				if(userName.equals(userNameToCheck) && password.equals(passwordToCheck)) {
+					
+					temproryCheck++;
+					
 					try {						
 						response.sendRedirect("http://localhost:8081/WebApplicationUserRegistration/Welcome.jsp");
 					} catch (Exception e) {						
@@ -48,6 +53,11 @@ public class UserLogin extends HttpServlet {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}
+		if(temproryCheck == 0)	{
+			
+			printWriterObject.write("Entered user name and password not matched please try again!!!");
+			response.sendRedirect("http://localhost:8081/WebApplicationUserRegistration/LoginPage.jsp");
 		}
 	}
 }
