@@ -1,5 +1,4 @@
 package com.bridz.insert_into_database;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -45,7 +44,7 @@ public class InsertDataBase {
 		ResultSet resultSet = statement.executeQuery(query);
 		return resultSet;
 	}
-
+	
 	// FOR EXECUTING OTHER METHOD
 	public static void run(String firstNameToStore, String lastNameToStore, String userNameToStore,
 			String passwordToStore) throws Exception {
