@@ -39,13 +39,13 @@
 					String passwordToShow = resultSetObject.getString(4);
 			%>
 
-
 			<tr width="100">
 				<td><%=firstNameToShow%></td>
 				<td><%=lastNameToShow%></td>
 				<td><%=userNameToShow%></td>
 				<td><%=passwordToShow%></td>
 			</tr>
+			
 			<%
 				} //WHILE LOOP ENDED
 			%>
