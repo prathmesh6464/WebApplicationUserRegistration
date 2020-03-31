@@ -24,4 +24,13 @@
 		<url-pattern>/registerUser</url-pattern>
 	</servlet-mapping>
 
+	<!-- EDITE DELETE SERVLET -->
+	<servlet>
+		<servlet-name>EditeDelete</servlet-name>
+		<servlet-class>com.bridz.insert_into_database.EditeDeleteDataBase</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditeDelete</servlet-name>
+		<url-pattern>/editeDelete</url-pattern>
+	</servlet-mapping>
 </web-app>
