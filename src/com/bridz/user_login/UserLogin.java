@@ -35,8 +35,8 @@ public class UserLogin extends HttpServlet {
 
 		try {
 			while(resultSet.next()) {
-				String userNameToCheck = resultSet.getString(3);
-				String passwordToCheck = resultSet.getString(4);
+				String userNameToCheck = resultSet.getString(4);
+				String passwordToCheck = resultSet.getString(5);
 				System.out.println(userNameToCheck);
 				System.out.println(passwordToCheck);
 				
