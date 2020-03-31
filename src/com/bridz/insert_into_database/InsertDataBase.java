@@ -1,4 +1,5 @@
 package com.bridz.insert_into_database;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -6,11 +7,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
 //INSERT DATABASE  USING MYSQL
 public class InsertDataBase {
 
-	//PROVIDES CONNECTION
+	// PROVIDES CONNECTION
 	public static Connection getConection() throws SQLException, ClassNotFoundException {
 		String url = "jdbc:mysql://localhost:3306/UserDataBase";
 		String userName = "root";
@@ -20,39 +20,38 @@ public class InsertDataBase {
 		return connectionWithMysql;
 	}
 
-	//INSERTING DATA INTO DATABASE
+	// INSERTING DATA INTO DATABASE
 	public void getMySqlForInsertingDataIntoDatabase(String firstNameToStore, String lastNameToStore,
 			String userNameToStore, String passwordToStore) throws Exception {
 		Connection connectionWithMysql = getConection();
-		PreparedStatement preparedStatement = connectionWithMysql.prepareStatement
-				("insert into user_form values(?,?,?,?)");
-		preparedStatement.setString(1,firstNameToStore);//1 specifies the first parameter in the query  
-		preparedStatement.setString(2,lastNameToStore);
-		preparedStatement.setString(3,userNameToStore);
-		preparedStatement.setString(4,passwordToStore);
+		PreparedStatement preparedStatement = connectionWithMysql
+				.prepareStatement("insert into user_form (first_name,last_name,user_name,password) values (?,?,?,?)");
+		preparedStatement.setString(1, firstNameToStore);// 1 specifies the first parameter in the query
+		preparedStatement.setString(2, lastNameToStore);
+		preparedStatement.setString(3, userNameToStore);
+		preparedStatement.setString(4, passwordToStore);
 		preparedStatement.executeUpdate();
 		preparedStatement.close();
 		connectionWithMysql.close();
 	}
 
-	//FOR GETTING RESULT SET
+	// FOR GETTING RESULT SET
 	public static ResultSet getResultSet() throws SQLException, ClassNotFoundException {
 
 		String query = "select * from User_Form";
 		Connection connectionWithMysql = getConection();
 		Statement statement = connectionWithMysql.createStatement();
 		ResultSet resultSet = statement.executeQuery(query);
-		return resultSet;		
+		return resultSet;
 	}
 
-	//FOR EXECUTING OTHER METHOD 
-	public static void run(String firstNameToStore, String lastNameToStore, 
-			String userNameToStore , String passwordToStore) throws Exception {
+	// FOR EXECUTING OTHER METHOD
+	public static void run(String firstNameToStore, String lastNameToStore, String userNameToStore,
+			String passwordToStore) throws Exception {
 
-		//CREATED OBJECT OF CONNECTION DATABASE
-		InsertDataBase connectionDatabaseObject =  new InsertDataBase();
-		connectionDatabaseObject.getMySqlForInsertingDataIntoDatabase(firstNameToStore, 
-				lastNameToStore, userNameToStore,passwordToStore);
+		// CREATED OBJECT OF CONNECTION DATABASE
+		InsertDataBase connectionDatabaseObject = new InsertDataBase();
+		connectionDatabaseObject.getMySqlForInsertingDataIntoDatabase(firstNameToStore, lastNameToStore,
+				userNameToStore, passwordToStore);
 	}
 }
-
