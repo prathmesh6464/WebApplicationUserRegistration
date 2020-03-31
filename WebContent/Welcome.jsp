@@ -28,33 +28,28 @@
 					<th>Password</th>
 				</tr>
 			</thead>
-		</table>
-		<%
-			ResultSet resultSetObject = InsertDataBase.getResultSet();
-			while (resultSetObject.next()) {
 
-				String firstNameToShow = resultSetObject.getString(1);
-				String lastNameToShow = resultSetObject.getString(2);
-				String userNameToShow = resultSetObject.getString(3);
-				String passwordToShow = resultSetObject.getString(4);
-		%>
+			<%
+				ResultSet resultSetObject = InsertDataBase.getResultSet();
+				while (resultSetObject.next()) {
 
-		<table border="1" width="600">
-			<tr>
-				<td width="80">&nbsp<%=firstNameToShow%>&nbsp
-				</td>
-				<td width="80">&nbsp<%=lastNameToShow%>&nbsp
-				</td>
-				<td width="80">&nbsp<%=userNameToShow%>&nbsp
-				</td>
-				<td width="80">&nbsp<%=passwordToShow%>&nbsp
-				</td>
+					String firstNameToShow = resultSetObject.getString(1);
+					String lastNameToShow = resultSetObject.getString(2);
+					String userNameToShow = resultSetObject.getString(3);
+					String passwordToShow = resultSetObject.getString(4);
+			%>
+
+
+			<tr width="100">
+				<td><%=firstNameToShow%></td>
+				<td><%=lastNameToShow%></td>
+				<td><%=userNameToShow%></td>
+				<td><%=passwordToShow%></td>
 			</tr>
+			<%
+				} //WHILE LOOP ENDED
+			%>
 		</table>
-
-		<%
-			}
-		%>
 	</center>
 </body>
 </html>
