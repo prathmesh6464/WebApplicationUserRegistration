@@ -33,7 +33,7 @@
 			<%
 				ResultSet resultSetObject = InsertDataBase.getResultSet();
 				while (resultSetObject.next()) {
-					
+
 					int userIdToShow = resultSetObject.getInt(1);
 					String firstNameToShow = resultSetObject.getString(2);
 					String lastNameToShow = resultSetObject.getString(3);
@@ -47,10 +47,16 @@
 				<td><%=lastNameToShow%></td>
 				<td><%=userNameToShow%></td>
 				<td><%=passwordToShow%></td>
-				<td><button>Edite</button></td>
-				<td><button>Delete</button></td>
+				<td><form action="editeDelete" method="post">	
+						<input type="hidden" name="id" value="<%=Integer.toString(userIdToShow)%>">				
+						<input type="submit" name="button" value="Edite" />
+					</form></td>
+				<td><form action="editeDelete" method="post">
+						<input type="hidden" name="id" value="<%=Integer.toString(userIdToShow)%>">	
+						<input type="submit" name="button" value="Delete" />
+					</form></td>
 			</tr>
-			
+
 			<%
 				} //WHILE LOOP ENDED
 			%>
