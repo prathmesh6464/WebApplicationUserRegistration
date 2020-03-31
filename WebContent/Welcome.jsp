@@ -19,13 +19,13 @@
 		</a>
 	</div>
 	<center>
-		<table border="1">
+		<table border="1" width="600">
 			<thead>
 				<tr>
-					<td>First Name</td>
-					<td>Last Name</td>
-					<td>User Name</td>
-					<td>Password</td>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>User Name</th>
+					<th>Password</th>
 				</tr>
 			</thead>
 		</table>
@@ -39,15 +39,17 @@
 				String passwordToShow = resultSetObject.getString(4);
 		%>
 
-		<table border="1">
-			<tbody>
-				<tr>
-					<td><%=firstNameToShow%>&nbsp</td>
-					<td><%=lastNameToShow%>&nbsp</td>
-					<td><%=userNameToShow%>&nbsp</td>
-					<td><%=passwordToShow%>&nbsp</td>
-				</tr>
-			</tbody>
+		<table border="1" width="600">
+			<tr>
+				<td width="80">&nbsp<%=firstNameToShow%>&nbsp
+				</td>
+				<td width="80">&nbsp<%=lastNameToShow%>&nbsp
+				</td>
+				<td width="80">&nbsp<%=userNameToShow%>&nbsp
+				</td>
+				<td width="80">&nbsp<%=passwordToShow%>&nbsp
+				</td>
+			</tr>
 		</table>
 
 		<%
