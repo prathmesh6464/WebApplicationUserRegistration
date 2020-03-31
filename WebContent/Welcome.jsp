@@ -12,55 +12,39 @@
 	<center>
 		<h1>Welcome</h1>
 	</center>
-		<div align="right">
+	<div align="right">
 		<a
 			href="http://localhost:8081/WebApplicationUserRegistration/LoginPage.jsp">
 			<input type="button" value="Logout" />
 		</a>
 	</div>
-	<%
-		ResultSet resultSetObject = InsertDataBase.getResultSet();
-		while (resultSetObject.next()) {
+	<center>
+		<%
+			ResultSet resultSetObject = InsertDataBase.getResultSet();
+			while (resultSetObject.next()) {
 
-			String firstNameToShow = resultSetObject.getString(1);
-			String lastNameToShow = resultSetObject.getString(2);
-			String userNameToShow = resultSetObject.getString(3);
-			String passwordToShow = resultSetObject.getString(4);
-			System.out.println(firstNameToShow);
-			System.out.println(lastNameToShow);
-			System.out.println(userNameToShow);
-			System.out.println(passwordToShow);
-		}
-	%>
-	<table>
-		<thead>
-			<tr>
-				<td><% while (resultSetObject.next()) {
+				String firstNameToShow = resultSetObject.getString(1);
+				String lastNameToShow = resultSetObject.getString(2);
+				String userNameToShow = resultSetObject.getString(3);
+				String passwordToShow = resultSetObject.getString(4);
+		%>
 
-					String firstNameToShow = resultSetObject.getString(1);
-					${firstNameToShow};} %>>
-				</td>
-				<td><% while (resultSetObject.next()) {
+		<table>
+			<thead>
+				<tr>
+					<td><%=firstNameToShow%>&nbsp</td>
+					<td><%=lastNameToShow%>&nbsp</td>
+					<td><%=userNameToShow%>&nbsp</td>
+					<td><%=passwordToShow%>&nbsp</td>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
 
-					String firstNameToShow = resultSetObject.getString(2);
-					${firstNameToShow};} %>>
-				</td>
-				<td><% while (resultSetObject.next()) {
-
-					String firstNameToShow = resultSetObject.getString(3);
-					${firstNameToShow};} %>>
-				</td><td><% while (resultSetObject.next()) {
-
-					String firstNameToShow = resultSetObject.getString(4);
-					${firstNameToShow};} %>>
-					
-				</td>
-			</tr>
-		</thead>
-		<tbody>
-		</tbody>
-	</table>
-
-
+		<%
+			}
+		%>
+	</center>
 </body>
 </html>
