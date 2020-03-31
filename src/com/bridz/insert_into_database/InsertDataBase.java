@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 //INSERT DATABASE  USING MYSQL
 public class InsertDataBase {
 
@@ -44,7 +45,7 @@ public class InsertDataBase {
 		ResultSet resultSet = statement.executeQuery(query);
 		return resultSet;
 	}
-	
+
 	// FOR EXECUTING OTHER METHOD
 	public static void run(String firstNameToStore, String lastNameToStore, String userNameToStore,
 			String passwordToStore) throws Exception {
