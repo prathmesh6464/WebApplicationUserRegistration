@@ -43,10 +43,10 @@ public class InsertDataBase {
 	// FOR GETTING RESULT SET
 	public static ResultSet getResultSet() throws SQLException, ClassNotFoundException {
 
-		String query = "select * from User_Form";
+		String SELECT_QUERY = "SELECT * FROM User_Form";
 		Connection connectionWithMysql = getConection();
 		Statement statement = connectionWithMysql.createStatement();
-		ResultSet resultSet = statement.executeQuery(query);
+		ResultSet resultSet = statement.executeQuery(SELECT_QUERY);
 		return resultSet;
 	}
 
