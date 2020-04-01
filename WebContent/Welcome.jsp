@@ -9,15 +9,17 @@
 <title>Home Page</title>
 </head>
 <body>
-	<center>
-		<h1>Welcome</h1>
-	</center>
 	<div align="right">
 		<a
 			href="http://localhost:8081/WebApplicationUserRegistration/LoginPage.jsp">
 			<input type="button" value="Logout" />
 		</a>
 	</div>
+	
+	<center>
+		<h1>Welcome</h1>
+	</center>
+
 	<center>
 		<table width="600">
 			<thead>
@@ -47,13 +49,15 @@
 				<td><%=lastNameToShow%></td>
 				<td><%=userNameToShow%></td>
 				<td><%=passwordToShow%></td>
-				<td><form action="editeDelete" method="post">	
-						<input type="hidden" name="id" value="<%=Integer.toString(userIdToShow)%>">				
-						<input type="submit" name="button" value="Edite" />
+				<td><form action="editeDelete" method="post">
+						<input type="hidden" name="id"
+							value="<%=Integer.toString(userIdToShow)%>"> <input
+							type="submit" name="button" value="Edite" />
 					</form></td>
 				<td><form action="editeDelete" method="post">
-						<input type="hidden" name="id" value="<%=Integer.toString(userIdToShow)%>">	
-						<input type="submit" name="button" value="Delete" />
+						<input type="hidden" name="id"
+							value="<%=Integer.toString(userIdToShow)%>"> <input
+							type="submit" name="button" value="Delete" />
 					</form></td>
 			</tr>
 
