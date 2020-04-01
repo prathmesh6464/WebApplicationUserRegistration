@@ -12,7 +12,7 @@
 					placeholder="Enter First Name" required></td>
 			</tr>
 			<tr>
-				<td><br> <label for="lastName">Last Name
+				<td><br> <label for="lastName">Last Name 
 						&nbsp; : &nbsp; &nbsp;</label></td>
 				<td><br> <input type="text" id="lastName"
 					name="lastNameOfUser" placeholder="Enter Last Name" required></td>
