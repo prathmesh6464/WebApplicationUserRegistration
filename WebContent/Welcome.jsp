@@ -15,6 +15,7 @@
 			<input type="button" value="Logout" />
 		</a>
 	</div>
+	
 	<center>
 		<h1>Welcome</h1>
 	</center>
