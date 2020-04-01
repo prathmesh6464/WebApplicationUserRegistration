@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<center>
+	<center> 
 		<h3>Edite User's Data</h3>
 		<!-- EDITING DATA FROM USER -->
 		<form action="editeUsersData" method="post">
