@@ -12,7 +12,7 @@ public class InsertDataBase {
 
 	// PROVIDES CONNECTION
 	public static Connection getConection() throws SQLException, ClassNotFoundException {
-		
+
 		String url = "jdbc:mysql://localhost:3306/UserDataBase";
 		String userName = "root";
 		String password = "admin";
@@ -24,13 +24,13 @@ public class InsertDataBase {
 	// INSERTING DATA INTO DATABASE
 	public void getMySqlForInsertingDataIntoDatabase(String firstNameToStore, String lastNameToStore,
 			String userNameToStore, String passwordToStore) throws Exception {
-		
+
 		Connection connectionWithMysql = getConection();
-		
+
 		PreparedStatement preparedStatement = connectionWithMysql
 				.prepareStatement("INSERT INTO user_form "
 						+ "(first_name,last_name,user_name,password) VALUES (?,?,?,?)");
-		
+
 		preparedStatement.setString(1, firstNameToStore);// 1 specifies the first parameter in the query
 		preparedStatement.setString(2, lastNameToStore);
 		preparedStatement.setString(3, userNameToStore);
