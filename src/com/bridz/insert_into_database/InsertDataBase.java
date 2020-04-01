@@ -12,6 +12,7 @@ public class InsertDataBase {
 
 	// PROVIDES CONNECTION
 	public static Connection getConection() throws SQLException, ClassNotFoundException {
+		
 		String url = "jdbc:mysql://localhost:3306/UserDataBase";
 		String userName = "root";
 		String password = "admin";
