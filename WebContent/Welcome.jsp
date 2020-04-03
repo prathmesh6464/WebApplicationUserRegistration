@@ -9,13 +9,20 @@
 <title>Home Page</title>
 </head>
 <body>
+	<%
+		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+		response.setHeader("Expires", "0");
+		if (session.getAttribute("userName") == null)
+			response.sendRedirect("http://localhost:8081/WebApplicationUserRegistration/LoginPage.jsp");
+	%>
+
 	<div align="right">
 		<a
 			href="http://localhost:8081/WebApplicationUserRegistration/LoginPage.jsp">
 			<input type="button" value="Logout" />
 		</a>
 	</div>
-	
+
 	<center>
 		<h1>Welcome</h1>
 	</center>
