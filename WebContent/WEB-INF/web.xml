@@ -33,7 +33,7 @@
 		<servlet-name>EditeDelete</servlet-name>
 		<url-pattern>/editeDelete</url-pattern>
 	</servlet-mapping>
-	
+
 	<!-- EDITE USER'S DATA SERVLET -->
 	<servlet>
 		<servlet-name>EditeUsersDataBase</servlet-name>
@@ -43,4 +43,16 @@
 		<servlet-name>EditeUsersDataBase</servlet-name>
 		<url-pattern>/editeUsersData</url-pattern>
 	</servlet-mapping>
+
+
+	<!-- LOGOUT SERVLET -->
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>com.bridz.user_login.Logout</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
 </web-app>
